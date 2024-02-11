@@ -7,7 +7,8 @@ package com.mycompany.csc229_211review_lab02hw;
 public abstract class Person {
 	
 	private String name;
-	private String address;
+	//changed to protected to allow access in Student
+	protected String address;
 	private short age;
 	
 	// constructor that takes only two paras
