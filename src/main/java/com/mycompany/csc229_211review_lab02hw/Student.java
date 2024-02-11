@@ -11,7 +11,8 @@ public class Student extends Person {
     public Student(String name, short age, double GPA, String address) {
         //call to superclass constructor
         super(name,age);
-        this.GPA = GPA;
+        //only allow GPA between 0.0 and 4.0 inclusive
+        this.GPA = (GPA >= 0.0 && GPA <= 4.0 ? GPA : 0.0);
         //changed access modifier of address in person to Protected to allow access in constructor and getter and setter
         this.address = address;
     }
@@ -37,7 +38,8 @@ public class Student extends Person {
 
     //setter for GPA
     public void setGPA(double GPA) {
-        this.GPA = GPA;
+        //only allow GPA between 0.0 and 4.0 inclusive
+        this.GPA = (GPA >= 0.0 && GPA <= 4.0 ? GPA : 0.0);
     }
 
     //override for toString method
